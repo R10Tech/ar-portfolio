@@ -79,17 +79,17 @@
   .hero-eyebrow {
     font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.22em;
     color: var(--accent); text-transform: uppercase; margin-bottom: 1.75rem;
-    opacity: 0; animation: up 0.7s 0.1s ease forwards;
+    animation: up 0.7s 0.1s ease forwards;
   }
   .hero-name {
     font-size: clamp(3.5rem, 9vw, 8.5rem); font-weight: 800;
     line-height: 0.92; letter-spacing: -0.035em; margin-bottom: 3rem;
-    opacity: 0; animation: up 0.7s 0.2s ease forwards;
+    animation: up 0.7s 0.2s ease forwards;
   }
   .hero-name em { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; color: var(--muted); }
   .hero-row {
     display: flex; align-items: flex-end; justify-content: space-between; gap: 3rem;
-    opacity: 0; animation: up 0.7s 0.32s ease forwards;
+    animation: up 0.7s 0.32s ease forwards;
   }
   .hero-bio { max-width: 460px; font-size: 1rem; color: var(--muted); line-height: 1.75; }
   .hero-bio strong { color: var(--text); font-weight: 600; }
@@ -187,8 +187,13 @@
   .foot-txt { font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 0.15em; color: var(--dim); text-transform: uppercase; }
 
   @keyframes up { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
-  .reveal { opacity: 1; transform: none; transition: opacity 0.65s ease, transform 0.65s ease; }
+  .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.65s ease, transform 0.65s ease; }
   .reveal.vis { opacity: 1; transform: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+    .reveal { opacity: 1; transform: none; }
+  }
 
   @media (max-width: 960px) {
     nav { padding: 1rem 1.5rem; }
@@ -572,5 +577,16 @@
   <span class="foot-txt">Austin, TX</span>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  const obs = new Inters
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script>
+  const obs = new IntersectionObserver((entries) => {
+    for (const e of entries) {
+      if (e.isIntersecting) e.target.classList.add('vis');
+    }
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.reveal').forEach((el) => obs.observe(el));
+</script>
+
+</body>
+</html>
