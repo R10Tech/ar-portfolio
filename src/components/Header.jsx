@@ -6,7 +6,7 @@ export default function Header() {
 
   return (
     <header className="header">
-      <div className="container header__inner">
+      <div className="header__inner">
         <a href="#" className="header__logo">
           Andrei Roman
         </a>

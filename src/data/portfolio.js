@@ -81,6 +81,7 @@ export const projects = [
     tileImage: '/assets/kinetiq-logo.png',
     tileImageFit: 'contain',
     tileImagePadding: '0',
+    tileImageRounded: true,
     metrics: [
       { value: 'Live', label: 'Pose Estimation' },
       { value: 'YOLO11', label: 'Detection Stack' },
@@ -103,14 +104,6 @@ export const projects = [
       'Led mechanical design of a full electric go-kart — complete SolidWorks CAD, MIG weldment fabrication, and structural verification under a 600+ lb static payload.',
     image: '/assets/capstone-portrait.png',
     imageAlt: 'Andrei Roman — N-ICE Kart fabrication in workshop',
-    tileBg: 'var(--color-bg-subtle)',
-    tileImage: '/assets/capstone-portrait.png',
-    tileImageFit: 'cover',
-    metrics: [
-      { value: '600+', label: 'lb Payload Verified' },
-      { value: 'I2C', label: 'Sensor Protocol' },
-      { value: 'SolidWorks', label: 'Full CAD Model' },
-    ],
     phases: [
       {
         num: 'Mechanical',
@@ -141,6 +134,8 @@ export const projects = [
     ],
   },
 ];
+
+export const carouselProjects = projects.filter((project) => !project.featured);
 
 export const skillGroups = [
   {
