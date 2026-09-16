@@ -46,11 +46,11 @@ export const projects = [
       'Founded and shipped a consumer fitness app in Flutter with Supabase — nearly 3,000 organic users. Integrated HealthKit for Apple Watch biometrics and OpenFoodFacts for nutrition logging.',
     link: 'https://altus.fit',
     linkLabel: 'altus.fit',
-    logo: '/assets/altus-logo-dark.png',
-    logoSmall: '/assets/altus-logo-dark.png',
+    logo: '/assets/altus-icon.png',
+    logoSmall: '/assets/altus-icon.png',
     logoTile: true,
-    tileBg: 'transparent',
-    tileImage: '/assets/altus-logo-blue.png',
+    tileBg: '#000000',
+    tileImage: '/assets/altus-icon.png',
     tileImageFit: 'contain',
     tileImagePadding: '0',
     metrics: [
@@ -92,6 +92,34 @@ export const projects = [
       'Real-time pose estimation pipeline',
       'iOS app ↔ self-hosted FastAPI server',
       'PyTorch ML stack for movement analysis',
+    ],
+  },
+  {
+    id: 'shad',
+    title: 'Shad',
+    subtitle: 'Founder · Fishing Globe',
+    period: 'Sep 2026 – Present',
+    description:
+      'A fishing product where the globe is the map — zoom into water, see aggregated catch activity, and keep private spots private. You never leave Earth for a pin on someone else’s dock.',
+    link: 'https://shad.fish',
+    linkLabel: 'shad.fish',
+    logo: '/assets/shad-icon.png',
+    logoSmall: '/assets/shad-icon.png',
+    logoTile: true,
+    tileBg: '#ffffff',
+    tileImage: '/assets/shad-icon.png',
+    tileImageFit: 'contain',
+    tileImagePadding: '12%',
+    metrics: [
+      { value: 'Globe', label: 'First, then the map' },
+      { value: 'Private', label: 'Spots stay hidden' },
+      { value: 'Mapbox', label: 'One continuous world' },
+    ],
+    tags: ['Next.js', 'Mapbox', 'Product Design', 'iOS'],
+    highlights: [
+      'The whole Earth, with inertia — continents first',
+      'Lakes appear as you approach',
+      'Catch counts by water, never a pin on a dock',
     ],
   },
   {
@@ -189,6 +217,61 @@ export const experience = [
 
 export const contact = {
   email: 'andreiroman09@gmail.com',
-  linkedin: 'https://linkedin.com/in/andrei-roman-138822188',
+  linkedin: 'https://www.linkedin.com/in/andrei-roman-138822188/',
   altus: 'https://altus.fit',
 };
+
+export const intent = {
+  title: 'Intent',
+  paragraphs: [
+    'I build things I believe will add value.',
+    'I’m a software developer who likes to make products I’m genuinely passionate about — tools people can actually use.',
+    'Through product design and the work of shipping, I want to solve the world’s problems one product at a time.',
+    'Altus. Kinetiq. Shad. Each one is a chance to leave behind a genuinely useful platform.',
+  ],
+  attribution: {
+    name: 'Andrei Roman',
+    role: 'Founder & Developer',
+  },
+};
+
+export const madeLinks = [
+  {
+    href: 'https://altus.fit',
+    title: 'altus.fit',
+    name: 'Altus',
+    description: 'Training, nutrition, and movement — one free fitness app',
+    logo: '/assets/altus-icon.png',
+    markBg: '#000000',
+    external: true,
+  },
+  {
+    href: 'https://www.kinetiqscience.fit',
+    title: 'kinetiqscience.fit',
+    name: 'Kinetiq Science',
+    description: 'Real-time computer vision for athletic injury prevention',
+    logo: '/assets/kinetiq-app-icon.png',
+    external: true,
+  },
+  {
+    href: 'https://shad.fish',
+    title: 'shad.fish',
+    name: 'Shad',
+    description: 'A fishing globe — zoom into water, never someone else’s dock',
+    logo: '/assets/shad-icon.png',
+    logoFit: 'contain',
+    markBg: '#ffffff',
+    mark: 'shad',
+    external: true,
+  },
+];
+
+export const connectLinks = [
+  {
+    href: 'https://www.linkedin.com/in/andrei-roman-138822188/',
+    title: 'LinkedIn',
+    description: 'Work, products, and the long version',
+    mark: 'linkedin',
+    external: true,
+  },
+];

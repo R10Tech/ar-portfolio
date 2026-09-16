@@ -1,5 +1,6 @@
 import { stats } from '../data/portfolio';
 import useReveal from '../hooks/useReveal';
+import { NavLink } from '../lib/router';
 
 function FloatingTile() {
   return (
@@ -10,7 +11,7 @@ function FloatingTile() {
       className="hero__float-tile"
       aria-label="Altus fitness app — nearly 3,000 users"
     >
-      <img src="/assets/altus-logo-blue.png" alt="" className="hero__float-tile-logo" />
+      <img src="/assets/altus-icon.png" alt="" className="hero__float-tile-logo" />
       <div className="hero__float-tile-body">
         <p className="hero__float-tile-label">Altus · Live Product</p>
         <p className="hero__float-tile-title">Nearly 3,000 users</p>
@@ -39,14 +40,13 @@ export default function Hero() {
           <h1 className="hero__title">
             Building
             <br />
-            <span className="hero__title-accent">Connected</span>
+            <span className="hero__title-accent">Awesome</span>
             <br />
-            Systems
+            Projects
           </h1>
         </div>
 
         <div className="hero__portrait-stack" ref={portraitRef}>
-          <div className="hero__portrait-pill" aria-hidden="true" />
           <div className="hero__portrait">
             <img
               src="/assets/hero-portrait.png"
@@ -72,10 +72,15 @@ export default function Hero() {
           ))}
         </div>
 
-        <p className="hero__subtitle" ref={subtitleRef}>
-          Embedded systems, electrical validation, and Linux-based integration — from SolidWorks
-          CAD and Python/I2C firmware to NMS deployments and product development.
-        </p>
+        <div className="hero__subtitle" ref={subtitleRef}>
+          <p>
+            Embedded systems, electrical validation, and Linux-based integration — from SolidWorks
+            CAD and Python/I2C firmware to NMS deployments and product development.
+          </p>
+          <NavLink to="/links" className="btn btn-primary hero__links-btn">
+            Links
+          </NavLink>
+        </div>
       </div>
     </section>
   );

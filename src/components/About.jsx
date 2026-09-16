@@ -31,8 +31,8 @@ export default function About() {
             <p>
               Most recently a Systems Integration Engineer at Oracle, working on NMS deployments
               for major utility clients. I also build independent products — Altus, a fitness app
-              with nearly 3,000 users, and Kinetiq Science, a computer-vision platform for athletic
-              injury prevention.
+              with nearly 3,000 users, Kinetiq Science, a computer-vision platform for athletic
+              injury prevention, and Shad, a fishing globe that keeps spots private.
             </p>
           </div>
         </div>

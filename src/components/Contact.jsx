@@ -1,5 +1,6 @@
 import { contact } from '../data/portfolio';
 import useReveal, { useSectionReveal } from '../hooks/useReveal';
+import { NavLink } from '../lib/router';
 
 export default function Contact() {
   const sectionRef = useSectionReveal();
@@ -39,6 +40,10 @@ export default function Contact() {
             <span className="contact__dot" />
             altus.fit
           </a>
+          <NavLink to="/links" className="contact__link">
+            <span className="contact__dot" />
+            All products — Links
+          </NavLink>
         </div>
       </div>
     </section>

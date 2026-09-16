@@ -1,27 +1,13 @@
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Services from './components/Services';
-import About from './components/About';
-import Portfolio from './components/Portfolio';
-import Experience from './components/Experience';
-import Contact from './components/Contact';
-import Racing from './components/Racing';
-import Footer from './components/Footer';
+import { usePath } from './lib/router';
+import Home from './pages/Home';
+import Links from './pages/Links';
 
 export default function App() {
-  return (
-    <>
-      <Header />
-      <main>
-        <Hero />
-        <Services />
-        <About />
-        <Portfolio />
-        <Experience />
-        <Contact />
-        <Racing />
-      </main>
-      <Footer />
-    </>
-  );
+  const path = usePath();
+
+  if (path === '/links' || path === '/links/') {
+    return <Links />;
+  }
+
+  return <Home />;
 }
