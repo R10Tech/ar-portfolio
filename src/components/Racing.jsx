@@ -10,7 +10,7 @@ export default function Racing() {
         <div className="racing__inner" ref={ref}>
           <div className="racing__photo">
             <img
-              src="/assets/racing-portrait.png"
+              src="/assets/racing-portrait.jpg"
               alt="Andrei Roman — professional racing driver at the kart track"
               loading="lazy"
             />

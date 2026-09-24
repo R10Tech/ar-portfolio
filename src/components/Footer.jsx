@@ -5,10 +5,12 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer__inner">
         <span>© 2026 Andrei Roman</span>
+        <NavLink to="/" className="footer__url">
+          andrei.roman
+        </NavLink>
         <NavLink to="/links" className="footer__links">
           Links
         </NavLink>
-        <span>Austin, TX</span>
       </div>
     </footer>
   );

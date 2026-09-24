@@ -152,16 +152,14 @@ export default function ProjectCarousel() {
       </div>
 
       <div className="case-carousel">
-        {!isScrollLocked && (
-          <button
-            type="button"
-            className="case-carousel__nav case-carousel__nav--prev"
-            onClick={prev}
-            aria-label="Previous project"
-          >
-            ‹
-          </button>
-        )}
+        <button
+          type="button"
+          className="case-carousel__nav case-carousel__nav--prev"
+          onClick={prev}
+          aria-label="Previous project"
+        >
+          ‹
+        </button>
 
         <div className="case-carousel__track">
           {carouselProjects.map((project, i) => (
@@ -169,16 +167,14 @@ export default function ProjectCarousel() {
           ))}
         </div>
 
-        {!isScrollLocked && (
-          <button
-            type="button"
-            className="case-carousel__nav case-carousel__nav--next"
-            onClick={next}
-            aria-label="Next project"
-          >
-            ›
-          </button>
-        )}
+        <button
+          type="button"
+          className="case-carousel__nav case-carousel__nav--next"
+          onClick={next}
+          aria-label="Next project"
+        >
+          ›
+        </button>
       </div>
 
       <div className="case-carousel__footer">

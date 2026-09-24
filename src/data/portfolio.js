@@ -1,8 +1,6 @@
 export const stats = [
-  { value: '~3k', label: 'Altus App Users', accent: true },
-  { value: '3', label: 'Major Utility Clients' },
-  { value: '600+', label: 'lb Payload Verified' },
-  { value: '300+', label: 'Devices Deployed' },
+  { value: '3k+', label: 'Altus App Users', accent: true },
+  { value: '3', label: 'Active Projects' },
 ];
 
 export const services = [
