@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import { NavLink, usePath } from '../lib/router';
+import { useTheme } from '../hooks/useTheme';
+import ThemeToggle from './ThemeToggle';
 
 const tabs = [
   { to: '/', label: 'Home' },
@@ -15,6 +17,7 @@ function isActive(path, to) {
 
 export default function Header() {
   const path = usePath();
+  const { theme, toggleTheme } = useTheme();
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -46,17 +49,20 @@ export default function Header() {
           ))}
         </nav>
 
-        <button
-          type="button"
-          className="header__burger"
-          aria-label={open ? 'Close menu' : 'Open menu'}
-          aria-expanded={open}
-          onClick={() => setOpen((value) => !value)}
-        >
-          <span />
-          <span />
-          <span />
-        </button>
+        <div className="header__actions">
+          <ThemeToggle theme={theme} onToggle={toggleTheme} />
+          <button
+            type="button"
+            className="header__burger"
+            aria-label={open ? 'Close menu' : 'Open menu'}
+            aria-expanded={open}
+            onClick={() => setOpen((value) => !value)}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+        </div>
       </div>
 
       <div className="header__overlay" hidden={!open}>

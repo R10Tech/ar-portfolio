@@ -19,6 +19,13 @@ export default function AboutPage() {
     <>
       <Header />
       <main className="page page--about">
+        <div className="page-intro container">
+          <p className="section-label">About</p>
+          <h1 className="page-intro__title">Who I am and what I do</h1>
+          <p className="page-intro__lede">
+            Builder, systems engineer, and the person behind Altus, Kinetiq, and Shad.
+          </p>
+        </div>
         <About />
         <Services />
         <Experience />

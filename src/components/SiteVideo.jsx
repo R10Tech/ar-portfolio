@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-export default function SiteVideo() {
+export default function SiteVideo({ className = '' }) {
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -31,10 +31,10 @@ export default function SiteVideo() {
   }, []);
 
   return (
-    <div className="site-video" aria-hidden="true">
+    <div className={`video-tile ${className}`.trim()} aria-hidden="true">
       <video
         ref={videoRef}
-        className="site-video__media"
+        className="video-tile__media"
         src="/assets/hero-bg.mp4"
         poster="/assets/hero-video-poster.jpg"
         autoPlay
@@ -44,7 +44,6 @@ export default function SiteVideo() {
         preload="auto"
         disablePictureInPicture
       />
-      <div className="site-video__veil" />
     </div>
   );
 }
