@@ -5,6 +5,16 @@ function subscribe(onStoreChange) {
   return () => window.removeEventListener('popstate', onStoreChange);
 }
 
+export function scrollToTopInstant() {
+  const html = document.documentElement;
+  const previous = html.style.scrollBehavior;
+  html.style.scrollBehavior = 'auto';
+  html.scrollTop = 0;
+  document.body.scrollTop = 0;
+  window.scrollTo(0, 0);
+  html.style.scrollBehavior = previous;
+}
+
 function getPath() {
   return window.location.pathname;
 }
@@ -24,8 +34,8 @@ export function navigate(to) {
   }
 
   window.history.pushState({}, '', to);
-  window.scrollTo(0, 0);
   window.dispatchEvent(new PopStateEvent('popstate'));
+  scrollToTopInstant();
 }
 
 export function NavLink({ to, children, className, onClick, ...props }) {
